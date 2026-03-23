@@ -1,0 +1,55 @@
+{
+  "name": "@openclaw-harness/core",
+  "version": "0.1.0",
+  "description": "OpenClaw Harness Core - Workflow engine and state management for Agent orchestration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevenTianyu/harness-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SevenTianyu/harness-core/issues"
+  },
+  "homepage": "https://github.com/SevenTianyu/harness-core#readme",
+  "author": "OpenClaw Harness Team",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "harness",
+    "workflow",
+    "state-machine",
+    "agent",
+    "orchestration",
+    "automation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
